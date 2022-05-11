@@ -30,4 +30,6 @@ COPY calysteau/generate_geojsons.sh generate_geojsons.sh
 COPY calysteau/generate_mbtiles.sh generate_mbtiles.sh
 RUN chmod +x download.sh generate_geojsons.sh generate_mbtiles.sh
 
+COPY calysteau/package.json package.json
+
 CMD ["/bin/bash"]
