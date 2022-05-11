@@ -13,6 +13,10 @@ docker build -t geo-assist .
 docker run -ti -v $(pwd)/calysteau:/geo-assist/calysteau geo-assist
 ```
 
+## How to use geo-assist
+
+Sample based on Georisques TRI data optimized from https://www.georisques.gouv.fr/
+
 ### Download an archive
 ```bash
 ./download-archive.sh https://www.calysteau.fr/data/Georisques2020/georisques_tri_2020.zip tri_2020.zip
@@ -20,8 +24,7 @@ docker run -ti -v $(pwd)/calysteau:/geo-assist/calysteau geo-assist
 
 * Argument 1 : Archive URL
 * Argument 2 : Archive full filename
-
-Sample based on Georisques TRI data optimized from https://www.georisques.gouv.fr/
+* Result : downloaded dataset is located in /calysteau/tri_2020
 
 ### Convert archive shapefiles to Geojson
 ```bash
@@ -29,6 +32,7 @@ Sample based on Georisques TRI data optimized from https://www.georisques.gouv.f
 ```
 
 * Argument 1 : Archive dataset name
+* Result : geojson files are in /calysteau/tri_2020
 
 ### Convert archive Geojson to MBTiles
 ```bash
@@ -36,3 +40,4 @@ Sample based on Georisques TRI data optimized from https://www.georisques.gouv.f
 ```
 
 * Argument 1 : Archive dataset name
+* Result : mbtiles files are in /calysteau/tri_2020
