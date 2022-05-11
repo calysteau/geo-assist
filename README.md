@@ -58,6 +58,11 @@ Sample based on Georisques French TRI data optimized from https://www.georisques
 ./download.sh https://www.calysteau.fr/data/Georisques2020/georisques_tri_2020.zip tri_2020.zip
 ```
 
+* Geoservices IGN admin-express
+```bash
+./download.sh https://www.calysteau.fr/data/Geoservices/admin-express.7z admin-express.7z
+```
+
 * High Seas Master world ports
 ```bash
 ./download.sh https://www.calysteau.fr/data/HighSeasMaster/HighSeasMaster.zip highseasmaster.zip
