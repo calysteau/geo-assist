@@ -19,7 +19,7 @@ Sample based on Georisques TRI data optimized from https://www.georisques.gouv.f
 
 ### Download an archive
 ```bash
-./download-archive.sh https://www.calysteau.fr/data/Georisques2020/georisques_tri_2020.zip tri_2020.zip
+./download.sh https://www.calysteau.fr/data/Georisques2020/georisques_tri_2020.zip tri_2020.zip
 ```
 
 * Argument 1 : Archive URL
