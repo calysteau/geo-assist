@@ -23,7 +23,7 @@ Sample based on Georisques French TRI data optimized from https://www.georisques
 ```
 
 * Argument 1 : Archive URL
-* Argument 2 : Archive full filename
+* Argument 2 : Local filename (dataset name will be file basename)
 * Result : downloaded dataset is located in /calysteau/tri_2020
 
 ### Convert archive shapefiles to Geojson
@@ -31,7 +31,7 @@ Sample based on Georisques French TRI data optimized from https://www.georisques
 ./generate_geojsons.sh tri_2020
 ```
 
-* Argument 1 : Archive dataset name
+* Argument 1 : Dataset name
 * Result : geojson files are in /calysteau/tri_2020
 
 ### Convert archive Geojson to MBTiles
@@ -39,7 +39,7 @@ Sample based on Georisques French TRI data optimized from https://www.georisques
 ./generate_mbtiles.sh tri_2020
 ```
 
-* Argument 1 : Archive dataset name
+* Argument 1 : Dataset name
 * Result : mbtiles files are in /calysteau/tri_2020
 
 ## Others resources
