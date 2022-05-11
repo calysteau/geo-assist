@@ -15,7 +15,7 @@ docker run -ti -v $(pwd)/calysteau:/geo-assist/calysteau geo-assist
 
 ## How to use geo-assist
 
-Sample based on Georisques TRI data optimized from https://www.georisques.gouv.fr/
+Sample based on Georisques French TRI data optimized from https://www.georisques.gouv.fr/
 
 ### Download an archive
 ```bash
@@ -41,3 +41,6 @@ Sample based on Georisques TRI data optimized from https://www.georisques.gouv.f
 
 * Argument 1 : Archive dataset name
 * Result : mbtiles files are in /calysteau/tri_2020
+
+## Others resources
+* French zip codes : http://www.geoclip.fr/data/codes_postaux_V5.zip
