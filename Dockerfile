@@ -24,4 +24,10 @@ RUN git clone https://github.com/mapbox/tippecanoe \
 # Setup workdir
 WORKDIR /calysteau
 
+# Install sources and scripts
+COPY calysteau/download.sh download.sh
+COPY calysteau/generate_geojsons.sh generate_geojsons.sh
+COPY calysteau/generate_mbtiles.sh generate_mbtiles.sh
+RUN chmod +x download.sh generate_geojsons.sh generate_mbtiles.sh
+
 CMD ["/bin/bash"]
