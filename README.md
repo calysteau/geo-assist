@@ -23,7 +23,7 @@ Sample based on Georisques French TRI data optimized from https://www.georisques
 ```
 
 * Argument 1 : Archive URL
-* Argument 2 : Local filename (dataset name will be file basename)
+* Argument 2 : Local filename (dataset name is defined by file basename)
 * Result : downloaded dataset is located in /calysteau/tri_2020
 
 ### Convert archive shapefiles to Geojson
