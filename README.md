@@ -43,4 +43,10 @@ Sample based on Georisques French TRI data optimized from https://www.georisques
 * Result : mbtiles files are in /calysteau/tri_2020
 
 ## Others resources
-* French zip codes : http://www.geoclip.fr/data/codes_postaux_V5.zip
+* Geoclip polygons French zip codes : https://www.calysteau.fr/data/CodesPostauxFrance/geoclip_codes_postaux_V5.zip
+* LaPoste points French zip codes : https://www.calysteau.fr/data/CodesPostauxFrance/laposte_hexasmal.zip
+* Géorisques Metropolitan France TRI :  https://www.calysteau.fr/data/Georisques2020/georisques_tri_2020.zip
+* High Seas Master world ports : https://www.calysteau.fr/data/HighSeasMaster/HighSeasMaster.zip
+* Mile High Club world airports : https://www.calysteau.fr/data/MileHighClub/MileHighClub.zip
+
+
