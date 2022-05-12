@@ -10,6 +10,6 @@ for SHAPE in $SHAPES; do
   JSON_BASENAME=`echo "$JSON_BASENAME" | tr '[:upper:]' '[:lower:]'`
   echo "Converting $SHAPE_BASENAME in $JSON_BASENAME"
   cd $SHAPE_PATH
-  mapshaper -i $SHAPE_BASENAME -o format=geojson precision=0.000001 $JSON_BASENAME
+  mapshaper -i $SHAPE_BASENAME -proj wgs84 -o format=geojson precision=0.000001 $JSON_BASENAME
   cd $WORKDIR
 done
