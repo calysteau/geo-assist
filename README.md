@@ -48,7 +48,7 @@ Sample based on Georisques French TRI data optimized from https://www.georisques
 ./download.sh https://www.calysteau.fr/data/Geoservices/admin-express.7z fr-admin-express
 ```
 
-* Géorisques Metropolitan France TRI
+* Géorisques Metropolitan France TRI (TRI cities and areas layers only)
 ```bash
 ./download.sh https://www.calysteau.fr/data/Georisques2020/georisques_tri_2020.zip fr-tri-2020
 ```
