@@ -1,7 +1,7 @@
 #/!bin/sh
-ARCHIVE_NAME=$1
+DATASET_NAME=$1
 
-SHAPES=`find dataset/${ARCHIVE_NAME} -name *.shp`
+SHAPES=`find dataset/${DATASET_NAME} -name *.shp`
 WORKDIR=`pwd`
 for SHAPE in $SHAPES; do
   SHAPE_PATH=`dirname "${SHAPE}"`
