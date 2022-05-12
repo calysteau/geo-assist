@@ -1,10 +1,12 @@
 [![geo-assist](https://www.calysteau.fr/images/calysteau-banner-96.png)](https://calysteau.fr)
 
 # geo-assist
-A Docker based solution to download and prepare geo data. geo-assist contains scripts that allow to download dataset and convert it (**shapefiles**, **geojson**, **mbtiles**).
+A Docker based solution to download and prepare geo data.  
+  
+__geo-assist__ contains scripts that allow to download dataset and convert it (**Shapefiles**, **GeoJSON**, **MBTiles**).
 
 ## Building geo-assist
-Build the geo-assist image from the Dockerfile.
+Build the __geo-assist__ image from the Dockerfile.
 
 ### Build the docker image
 ```bash
@@ -17,7 +19,7 @@ docker run -ti -v $(pwd)/calysteau:/geo-assist/calysteau geo-assist
 ```
 
 ## How to use geo-assist
-Following samples are based on Georisques French TRI data from https://www.georisques.gouv.fr/
+Following samples are based on *Georisques* data from https://www.georisques.gouv.fr/
 
 ### Download an archive
 ```bash
@@ -26,7 +28,7 @@ Following samples are based on Georisques French TRI data from https://www.geori
 
 * Argument 1 : Archive URL
 * Argument 2 : Dataset name
-* Result : downloaded dataset is available in /calysteau/fr-tri-2020
+* Result : downloaded dataset is available in `/calysteau/fr-tri-2020`
 
 ### Convert all datasets shapefiles to GeoJSON files
 ```bash
@@ -34,7 +36,7 @@ Following samples are based on Georisques French TRI data from https://www.geori
 ```
 
 * No argument
-* Result : GeoJSON files are created for all shapefiles in /calysteau/dataset/ directory
+* Result : GeoJSON files are created for all shapefiles in `/calysteau/dataset/` directory
 
 ### Convert single dataset shapefiles to GeoJSON files
 ```bash
@@ -42,7 +44,7 @@ Following samples are based on Georisques French TRI data from https://www.geori
 ```
 
 * Argument 1 : Dataset name
-* Result : GeoJSON files are created for all shapefiles in in /calysteau/dataset/fr-tri-2020
+* Result : GeoJSON files are created for all shapefiles in in `/calysteau/dataset/fr-tri-2020`
 
 ### Convert all datasets GeoJSON files to MBTiles files
 ```bash
@@ -50,7 +52,7 @@ Following samples are based on Georisques French TRI data from https://www.geori
 ```
 
 * No argument
-* Result : MBTiles files are created for all GeoJSON files in /calysteau/dataset directory
+* Result : MBTiles files are created for all GeoJSON files in `/calysteau/dataset/` directory
 
 ### Convert single dataset Geojson files to MBTiles files
 ```bash
@@ -58,7 +60,7 @@ Following samples are based on Georisques French TRI data from https://www.geori
 ```
 
 * Argument 1 : Dataset name
-* Result : MBTiles files are created all GeoJSON files in /calysteau/dataset/fr-tri-2020
+* Result : MBTiles files are created all GeoJSON files in `/calysteau/dataset/fr-tri-2020`
 
 ## Available datasets
 * Geoservices IGN admin-express
