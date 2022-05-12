@@ -53,6 +53,11 @@ Sample based on Georisques French TRI data optimized from https://www.georisques
 ./download.sh https://www.calysteau.fr/data/Georisques2020/georisques_tri_2020.zip fr-tri-2020
 ```
 
+* Full Metropolitan France TRI 2020 data from Géorisques website (warning size 4.6 GO)
+```bash
+./download.sh https://files.georisques.fr/di_2020/tri_2020_sig_di.zip fr-tri-2020-full
+```
+
 * Geoclip polygons French zip codes
 ```bash
 ./download.sh https://www.calysteau.fr/data/CodesPostauxFrance/geoclip_codes_postaux_V5.zip fr-zipcode-v5
