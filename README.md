@@ -43,6 +43,16 @@ Sample based on Georisques French TRI data optimized from https://www.georisques
 * Result : mbtiles files are created in /calysteau/fr-tri-2020
 
 ## Others resources
+* Geoservices IGN admin-express
+```bash
+./download.sh https://www.calysteau.fr/data/Geoservices/admin-express.7z fr-admin-express
+```
+
+* Géorisques Metropolitan France TRI
+```bash
+./download.sh https://www.calysteau.fr/data/Georisques2020/georisques_tri_2020.zip fr-tri-2020
+```
+
 * Geoclip polygons French zip codes
 ```bash
 ./download.sh https://www.calysteau.fr/data/CodesPostauxFrance/geoclip_codes_postaux_V5.zip fr-zipcode-v5
@@ -51,16 +61,6 @@ Sample based on Georisques French TRI data optimized from https://www.georisques
 * LaPoste points French zip codes
 ```bash
 ./download.sh https://www.calysteau.fr/data/CodesPostauxFrance/laposte_hexasmal.zip fr-zipcode-laposte
-```
-
-* Géorisques Metropolitan France TRI
-```bash
-./download.sh https://www.calysteau.fr/data/Georisques2020/georisques_tri_2020.zip fr-tri-2020
-```
-
-* Geoservices IGN admin-express
-```bash
-./download.sh https://www.calysteau.fr/data/Geoservices/admin-express.7z fr-admin-express
 ```
 
 * High Seas Master world ports
