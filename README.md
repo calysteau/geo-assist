@@ -65,9 +65,14 @@ Following samples are based on *Georisques* data from https://www.georisques.gou
 ----------------------
 
 # Available datasets
-* Geoservices IGN admin-express
+* Geoservices IGN admin-express (https://geoservices.ign.fr/adminexpress)
 ```bash
 ./download.sh https://www.calysteau.fr/data/Geoservices/admin-express.7z fr-admin-express
+```
+
+* Full Metropolitan France TRI 2020 data (https://www.georisques.gouv.fr/)
+```bash
+./download.sh https://files.georisques.fr/di_2020/tri_2020_sig_di.zip fr-tri-2020-full
 ```
 
 * Géorisques Metropolitan France TRI (TRI zones and municipalities concerned only)
@@ -75,27 +80,22 @@ Following samples are based on *Georisques* data from https://www.georisques.gou
 ./download.sh https://www.calysteau.fr/data/Georisques2020/georisques_tri_2020.zip fr-tri-2020
 ```
 
-* Full Metropolitan France TRI 2020 data from Géorisques website (*warning archive size is 4.6 GO*)
-```bash
-./download.sh https://files.georisques.fr/di_2020/tri_2020_sig_di.zip fr-tri-2020-full
-```
-
-* Geoclip polygons French zip codes
+* Geoclip polygons French zip codes (https://www.data.gouv.fr/fr/datasets/fond-de-carte-des-codes-postaux/)
 ```bash
 ./download.sh https://www.calysteau.fr/data/CodesPostauxFrance/geoclip_codes_postaux_V5.zip fr-zipcode-v5
 ```
 
-* LaPoste points French zip codes
+* LaPoste points French zip codes (https://datanova.laposte.fr/explore/dataset/laposte_hexasmal/)
 ```bash
 ./download.sh https://www.calysteau.fr/data/CodesPostauxFrance/laposte_hexasmal.zip fr-zipcode-laposte
 ```
 
-* High Seas Master world ports
+* High Seas Master world ports (https://github.com/nvkelso/high-seas)
 ```bash
 ./download.sh https://www.calysteau.fr/data/HighSeasMaster/HighSeasMaster.zip world-highseasports
 ```
 
-* Mile High Club world airports
+* Mile High Club world airports (https://github.com/nvkelso/mile-high-club)
 ```bash
 ./download.sh https://www.calysteau.fr/data/MileHighClub/MileHighClub.zip world-airports
 ```
