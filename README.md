@@ -3,6 +3,9 @@
 # geo-assist
 A Docker based solution to download and prepare geo data. geo-assist contains scripts that allow to download dataset and convert it (**shapefiles**, **geojson**, **mbtiles**).
 
+## Building geo-assist
+Build the geo-assist image from the Dockerfile.
+
 ### Build the docker image
 ```bash
 docker build -t geo-assist .
@@ -14,8 +17,7 @@ docker run -ti -v $(pwd)/calysteau:/geo-assist/calysteau geo-assist
 ```
 
 ## How to use geo-assist
-
-Sample based on Georisques French TRI data optimized from https://www.georisques.gouv.fr/
+Following samples are based on Georisques French TRI data from https://www.georisques.gouv.fr/
 
 ### Download an archive
 ```bash
@@ -26,23 +28,39 @@ Sample based on Georisques French TRI data optimized from https://www.georisques
 * Argument 2 : Dataset name
 * Result : downloaded dataset is available in /calysteau/fr-tri-2020
 
-### Convert dataset shapefiles to Geojson
+### Convert all datasets shapefiles to GeoJSON files
+```bash
+./generate_geojsons.sh
+```
+
+* No argument
+* Result : GeoJSON files are created for all shapefiles in /calysteau/dataset/ directory
+
+### Convert single dataset shapefiles to GeoJSON files
 ```bash
 ./generate_geojsons.sh fr-tri-2020
 ```
 
 * Argument 1 : Dataset name
-* Result : geojson files are created in /calysteau/fr-tri-2020
+* Result : GeoJSON files are created for all shapefiles in in /calysteau/dataset/fr-tri-2020
 
-### Convert dataset Geojson to MBTiles
+### Convert all datasets GeoJSON files to MBTiles files
+```bash
+./generate_mbtiles.sh
+```
+
+* No argument
+* Result : MBTiles files are created for all GeoJSON files in /calysteau/dataset directory
+
+### Convert single dataset Geojson files to MBTiles files
 ```bash
 ./generate_mbtiles.sh fr-tri-2020
 ```
 
 * Argument 1 : Dataset name
-* Result : mbtiles files are created in /calysteau/fr-tri-2020
+* Result : MBTiles files are created all GeoJSON files in /calysteau/dataset/fr-tri-2020
 
-## Others resources
+## Available datasets
 * Geoservices IGN admin-express
 ```bash
 ./download.sh https://www.calysteau.fr/data/Geoservices/admin-express.7z fr-admin-express
