@@ -19,11 +19,11 @@ Sample based on Georisques French TRI data optimized from https://www.georisques
 
 ### Download an archive
 ```bash
-./download.sh https://www.calysteau.fr/data/Georisques2020/georisques_tri_2020.zip tri_2020.zip
+./download.sh https://www.calysteau.fr/data/Georisques2020/georisques_tri_2020.zip tri_2020
 ```
 
 * Argument 1 : Archive URL
-* Argument 2 : Local filename (dataset name is defined by file basename)
+* Argument 2 : Local dataset name
 * Result : downloaded dataset is located in /calysteau/tri_2020
 
 ### Convert dataset shapefiles to Geojson
@@ -45,30 +45,30 @@ Sample based on Georisques French TRI data optimized from https://www.georisques
 ## Others resources
 * Geoclip polygons French zip codes
 ```bash
-./download.sh https://www.calysteau.fr/data/CodesPostauxFrance/geoclip_codes_postaux_V5.zip cp_v5.zip
+./download.sh https://www.calysteau.fr/data/CodesPostauxFrance/geoclip_codes_postaux_V5.zip cp_v5
 ```
 
 * LaPoste points French zip codes
 ```bash
-./download.sh https://www.calysteau.fr/data/CodesPostauxFrance/laposte_hexasmal.zip cp_laposte.zip
+./download.sh https://www.calysteau.fr/data/CodesPostauxFrance/laposte_hexasmal.zip cp_laposte
 ```
 
 * Géorisques Metropolitan France TRI
 ```bash
-./download.sh https://www.calysteau.fr/data/Georisques2020/georisques_tri_2020.zip tri_2020.zip
+./download.sh https://www.calysteau.fr/data/Georisques2020/georisques_tri_2020.zip tri_2020
 ```
 
 * Geoservices IGN admin-express
 ```bash
-./download.sh https://www.calysteau.fr/data/Geoservices/admin-express.7z admin-express.7z
+./download.sh https://www.calysteau.fr/data/Geoservices/admin-express.7z admin-express
 ```
 
 * High Seas Master world ports
 ```bash
-./download.sh https://www.calysteau.fr/data/HighSeasMaster/HighSeasMaster.zip highseasmaster.zip
+./download.sh https://www.calysteau.fr/data/HighSeasMaster/HighSeasMaster.zip world-highseasports
 ```
 
 * Mile High Club world airports
 ```bash
-./download.sh https://www.calysteau.fr/data/MileHighClub/MileHighClub.zip milehighclub.zip
+./download.sh https://www.calysteau.fr/data/MileHighClub/MileHighClub.zip world-airports
 ```
