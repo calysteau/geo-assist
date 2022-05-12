@@ -5,12 +5,13 @@ GEOJSONS=`find dataset/${DATASET_NAME} -name '*.geojson'`
 WORKDIR=`pwd`
 
 for GEOJSON in $GEOJSONS; do
-  echo "Processing file $GEOJSON"
 
   GEOJSON_PATH=`dirname "${GEOJSON}"`
   GEOJSON_BASENAME=`basename "${GEOJSON}"`
   MBTILES_BASENAME=`echo $GEOJSON_BASENAME | sed -e 's/.geojson/.mbtiles/g'`
+  DATASET_NAME=`echo $GEOJSON_PATH | cut -d '/' -f 2`
 
+  echo "Processing file $GEOJSON_BASENAME in $DATASET_NAME"
   cd $GEOJSON_PATH
 
   if [ $DATASET_NAME = "fr-admin-express" ]; then
