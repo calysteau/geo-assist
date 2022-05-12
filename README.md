@@ -1,9 +1,9 @@
-[![geo-assist](https://www.calysteau.fr/images/calysteau-banner-96.png)](https://calysteau.fr)
+[![geo-assist](https://www.calysteau.fr/images/geo-assist-banner-96.png)](https://calysteau.fr)
 
-# geo-assist
-A Docker based solution to download and prepare geo data.  
+# Summary
+__geo-assit__ is a Docker based solution to download and prepare geo data.  
   
-__geo-assist__ contains scripts that allow to download dataset and convert it (**Shapefiles**, **GeoJSON**, **MBTiles**).
+The basic system contains scripts that allow you to download datasets and convert them (**Shapefiles**, **GeoJSON**, **MBTiles**).
 
 ## Building geo-assist
 Build the __geo-assist__ image from the Dockerfile.
