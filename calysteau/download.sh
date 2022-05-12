@@ -1,16 +1,16 @@
 #/!bin/sh
 ARCHIVE_URL=$1
-ARCHIVE_NAME=$2
-ARCHIVE_FILEEXT="${ARCHIVE_NAME##*.}"
-ARCHIVE_FILENAME="${ARCHIVE_NAME%.*}"
+DATASET_NAME=$2
+ARCHIVE_FILEEXT="${ARCHIVE_URL##*.}"
+ARCHIVE_FILENAME="${DATASET_NAME}.${ARCHIVE_FILEEXT}"
 
-echo "Processing $ARCHIVE_NAME"
+echo "Processing $DATASET_NAME"
 mkdir -p dataset
 
 echo "Downloading $ARCHIVE_URL"
-wget $ARCHIVE_URL -O dataset/$ARCHIVE_NAME
+wget $ARCHIVE_URL -O dataset/$ARCHIVE_FILENAME
 
-echo "Uncompressing $ARCHIVE_NAME"
+echo "Uncompressing $ARCHIVE_FILENAME"
+rm -fr dataset/$DATASET_NAME
+7z x dataset/$ARCHIVE_FILENAME -odataset/$DATASET_NAME
 rm -fr dataset/$ARCHIVE_FILENAME
-7z x dataset/$ARCHIVE_NAME -odataset/$ARCHIVE_FILENAME
-rm -fr dataset/$ARCHIVE_NAME
