@@ -15,7 +15,7 @@ docker build -t geo-assist .
 
 ### Use the docker image
 ```bash
-docker run -ti -v $(pwd)/calysteau:/geo-assist/calysteau geo-assist
+docker run -ti -v $(pwd)/calysteau:/calysteau geo-assist
 ```
 
 ## How to use geo-assist
