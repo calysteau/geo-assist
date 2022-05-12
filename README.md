@@ -19,48 +19,48 @@ Sample based on Georisques French TRI data optimized from https://www.georisques
 
 ### Download an archive
 ```bash
-./download.sh https://www.calysteau.fr/data/Georisques2020/georisques_tri_2020.zip tri_2020
+./download.sh https://www.calysteau.fr/data/Georisques2020/georisques_tri_2020.zip fr-tri-2020
 ```
 
 * Argument 1 : Archive URL
-* Argument 2 : Local dataset name
-* Result : downloaded dataset is located in /calysteau/tri_2020
+* Argument 2 : Dataset name
+* Result : downloaded dataset is available in /calysteau/fr-tri-2020
 
 ### Convert dataset shapefiles to Geojson
 ```bash
-./generate_geojsons.sh tri_2020
+./generate_geojsons.sh fr-tri-2020
 ```
 
 * Argument 1 : Dataset name
-* Result : geojson files are in /calysteau/tri_2020
+* Result : geojson files are created in /calysteau/fr-tri-2020
 
 ### Convert dataset Geojson to MBTiles
 ```bash
-./generate_mbtiles.sh tri_2020
+./generate_mbtiles.sh fr-tri-2020
 ```
 
 * Argument 1 : Dataset name
-* Result : mbtiles files are in /calysteau/tri_2020
+* Result : mbtiles files are created in /calysteau/fr-tri-2020
 
 ## Others resources
 * Geoclip polygons French zip codes
 ```bash
-./download.sh https://www.calysteau.fr/data/CodesPostauxFrance/geoclip_codes_postaux_V5.zip cp_v5
+./download.sh https://www.calysteau.fr/data/CodesPostauxFrance/geoclip_codes_postaux_V5.zip fr-zipcode-v5
 ```
 
 * LaPoste points French zip codes
 ```bash
-./download.sh https://www.calysteau.fr/data/CodesPostauxFrance/laposte_hexasmal.zip cp_laposte
+./download.sh https://www.calysteau.fr/data/CodesPostauxFrance/laposte_hexasmal.zip fr-zipcode-laposte
 ```
 
 * Géorisques Metropolitan France TRI
 ```bash
-./download.sh https://www.calysteau.fr/data/Georisques2020/georisques_tri_2020.zip tri_2020
+./download.sh https://www.calysteau.fr/data/Georisques2020/georisques_tri_2020.zip fr-tri-2020
 ```
 
 * Geoservices IGN admin-express
 ```bash
-./download.sh https://www.calysteau.fr/data/Geoservices/admin-express.7z admin-express
+./download.sh https://www.calysteau.fr/data/Geoservices/admin-express.7z fr-admin-express
 ```
 
 * High Seas Master world ports
