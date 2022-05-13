@@ -25,11 +25,15 @@ RUN git clone https://github.com/mapbox/tippecanoe \
 WORKDIR /calysteau
 
 # Install sources and scripts
+COPY calysteau/script/generate-toponyms.js script/generate-toponyms.js
 COPY calysteau/download.sh download.sh
 COPY calysteau/generate_geojsons.sh generate_geojsons.sh
+COPY calysteau/generate_geojsons_toponyms.sh generate_geojsons_toponyms.sh
 COPY calysteau/generate_mbtiles.sh generate_mbtiles.sh
-RUN chmod +x download.sh generate_geojsons.sh generate_mbtiles.sh
+RUN chmod +x download.sh generate_geojsons.sh generate_geojsons_toponyms.sh generate_mbtiles.sh
 
-COPY package.json package.json
+COPY calysteau/package.json package.jsons
+COPY calysteau/yarn.lock yarn.lock
+RUN yarn
 
 CMD ["/bin/bash"]
