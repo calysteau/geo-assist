@@ -25,7 +25,7 @@ RUN git clone https://github.com/mapbox/tippecanoe \
 WORKDIR /calysteau
 
 # Install sources and scripts
-COPY calysteau/script/generate-toponyms.js script/generate-toponyms.js
+COPY script/generate-toponyms.js script/generate-toponyms.js
 COPY calysteau/download.sh download.sh
 COPY calysteau/generate_geojsons.sh generate_geojsons.sh
 COPY calysteau/generate_geojsons_toponyms.sh generate_geojsons_toponyms.sh
