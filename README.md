@@ -100,6 +100,11 @@ Following samples are based on *Georisques* data from https://www.georisques.gou
 ./download.sh https://www.calysteau.fr/data/CodesPostauxFrance/laposte_hexasmal.zip fr-zipcode-laposte
 ```
 
+* World Natural Earth (https://www.naturalearthdata.com/)
+```bash
+./download.sh https://naciscdn.org/naturalearth/packages/natural_earth_vector.zip world-naturalearth
+```
+
 * High Seas Master world ports (https://github.com/nvkelso/high-seas)
 ```bash
 ./download.sh https://www.calysteau.fr/data/HighSeasMaster/HighSeasMaster.zip world-highseasports
