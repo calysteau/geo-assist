@@ -70,7 +70,8 @@ Following samples are based on *Georisques* data from https://www.georisques.gou
 ./download.sh https://www.calysteau.fr/data/Geoservices/admin-express.7z fr-admin-express
 ```
 
-* Full Metropolitan France TRI 2020 data (https://www.georisques.gouv.fr/)
+* Full Metropolitan France TRI 2020 data (https://www.georisques.gouv.fr/)  
+*Warning archive size is about 4.6 GB*  
 ```bash
 ./download.sh https://files.georisques.fr/di_2020/tri_2020_sig_di.zip fr-tri-2020-full
 ```
