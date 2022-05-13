@@ -41,6 +41,9 @@ for GEOJSON in $GEOJSONS; do
   elif [ $DATASET_NAME = "fr-zipcode-laposte" ] || [ $DATASET_NAME = "world-airports" ] || [ $DATASET_NAME = "world-highseasports" ]; then
     echo "Applying Calysteau global points parameters"
     tippecanoe -f -o $MBTILES_BASENAME -Z8 -z12 --coalesce-densest-as-needed -r1 --cluster-distance=10 $GEOJSON_BASENAME
+  elif [ $DATASET_NAME = "world-naturalearth" ]; then
+    echo "Applying Natural Earth parameters"
+    tippecanoe -zg -o $MBTILES_BASENAME --coalesce-densest-as-needed --extend-zooms-if-still-dropping $GEOJSON_BASENAME
   else
     echo "Applying default parameters"
     tippecanoe -f -o $MBTILES_BASENAME -Z2 -z12 --coalesce-densest-as-needed --extend-zooms-if-still-dropping --drop-smallest-as-needed --simplification=12 --simplify-only-low-zooms $GEOJSON_BASENAME
