@@ -46,6 +46,14 @@ Following samples are based on *Georisques* data from https://www.georisques.gou
 * Argument 1 : Dataset name
 * Result : GeoJSON files are created for all shapefiles in in `/calysteau/dataset/fr-tri-2020`
 
+### Create specific layers toponyms in a GeoJSON files
+```bash
+./generate_geojsons_toponyms.sh
+```
+
+* No argument
+* Result : GeoJSON files are created for departements and regions in in `/calysteau/dataset/fr-admin-express`
+
 ### Convert all datasets GeoJSON files to MBTiles files
 ```bash
 ./generate_mbtiles.sh
