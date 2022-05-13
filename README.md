@@ -46,7 +46,7 @@ Following samples are based on *Georisques* data from https://www.georisques.gou
 * Argument 1 : Dataset name
 * Result : GeoJSON files are created for all shapefiles in in `/calysteau/dataset/fr-tri-2020`
 
-### Create specific layers toponyms in a GeoJSON files
+### Create specific layers toponyms in GeoJSON files
 *Works only with departements and regions in fr-admin-express dataset.*  
 ```bash
 ./generate_geojsons_toponyms.sh
