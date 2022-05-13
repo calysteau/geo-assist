@@ -32,8 +32,8 @@ COPY calysteau/generate_geojsons_toponyms.sh generate_geojsons_toponyms.sh
 COPY calysteau/generate_mbtiles.sh generate_mbtiles.sh
 RUN chmod +x download.sh generate_geojsons.sh generate_geojsons_toponyms.sh generate_mbtiles.sh
 
-COPY calysteau/package.json package.jsons
-COPY calysteau/yarn.lock yarn.lock
+COPY package.json package.jsons
+COPY yarn.lock yarn.lock
 RUN yarn
 
 CMD ["/bin/bash"]
