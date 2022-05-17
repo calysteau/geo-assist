@@ -30,7 +30,8 @@ COPY calysteau/download.sh .
 COPY calysteau/generate_geojsons.sh .
 COPY calysteau/generate_geojsons_toponyms.sh .
 COPY calysteau/generate_mbtiles.sh .
-RUN chmod +x download.sh generate_geojsons.sh generate_geojsons_toponyms.sh generate_mbtiles.sh
+COPY calysteau/merge_mbtiles.sh .
+RUN chmod +x download.sh generate_geojsons.sh generate_geojsons_toponyms.sh generate_mbtiles.sh merge_mbtiles.sh
 
 COPY package.json package.json
 COPY yarn.lock yarn.lock
