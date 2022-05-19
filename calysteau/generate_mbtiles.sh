@@ -11,7 +11,6 @@ for GEOJSON in $GEOJSONS; do
   MBTILES_BASENAME=`echo $GEOJSON_BASENAME | sed -e 's/.geojson/.mbtiles/g'`
   DATASET_NAME=`echo $GEOJSON_PATH | cut -d '/' -f 2`
 
-  echo "Processing file $GEOJSON_BASENAME in $DATASET_NAME"
   cd $GEOJSON_PATH
 
   if [ $DATASET_NAME = "fr-admin-express" ]; then
@@ -42,8 +41,25 @@ for GEOJSON in $GEOJSONS; do
     echo "Applying Calysteau global points parameters"
     tippecanoe -f -o $MBTILES_BASENAME -Z8 -z12 --coalesce-densest-as-needed -r1 --cluster-distance=10 $GEOJSON_BASENAME
   elif [ $DATASET_NAME = "world-naturalearth" ]; then
-    echo "Applying Natural Earth parameters"
-    tippecanoe -zg -o $MBTILES_BASENAME --coalesce-densest-as-needed --extend-zooms-if-still-dropping $GEOJSON_BASENAME
+    if [ $GEOJSON_BASENAME = "ne_10m_railroads.geojson" ] || [ $GEOJSON_BASENAME = "ne_10m_roads.geojson" ]; then
+      echo "Applying Natural Earth parameters for Linear features (ex railroads)"
+      tippecanoe -f -o $MBTILES_BASENAME -Z4 -z8 --drop-densest-as-needed --extend-zooms-if-still-dropping $GEOJSON_BASENAME
+    elif [ $GEOJSON_BASENAME = "ne_10m_admin_2_counties_scale_rank_minor_islands.geojson" ] || [ $GEOJSON_BASENAME = "ne_10m_admin_1_states_provinces_scale_rank_minor_islands.geojson" ]; then
+      echo "Applying Natural Earth parameters for continuous polygon features (ex states and provinces)"
+      tippecanoe -f -o $MBTILES_BASENAME -Z4 -z8 --coalesce-densest-as-needed --extend-zooms-if-still-dropping $GEOJSON_BASENAME
+    elif [ $GEOJSON_BASENAME = "ne_10m_admin_0_countries.geojson" ]; then
+      echo "Applying Natural Earth parameters for countries"
+      tippecanoe -f -o $MBTILES_BASENAME -Z2 -z8 --drop-densest-as-needed $GEOJSON_BASENAME
+    elif [ $GEOJSON_BASENAME = "ne_10m_admin_2_label_points.geojson" ] || [ $GEOJSON_BASENAME = "ne_10m_admin_1_label_points.geojson" ] || [ $GEOJSON_BASENAME = "ne_10m_airports.geojson" ] || [ $GEOJSON_BASENAME = "ne_10m_ports.geojson" ]; then
+      echo "Applying Natural Earth parameters for points"
+      tippecanoe -f -o $MBTILES_BASENAME -Z4 -z8 -r1 --cluster-distance=10 $GEOJSON_BASENAME
+    elif [ $GEOJSON_BASENAME = "ne_10m_populated_places.geojson" ]; then
+      echo "Applying Natural Earth parameters for Clustered points (ex world cities), summing the clustered population"
+      tippecanoe -f -o $MBTILES_BASENAME -Z4 -z12 -r1 --cluster-distance=10 --accumulate-attribute=POP_MAX:sum $GEOJSON_BASENAME
+    elif [ $GEOJSON_BASENAME = "ne_10m_urban_areas.geojson" ]; then
+      echo "Applying Natural Earth parameters for polygon features, visible at all zoom levels"
+      tippecanoe -f -o $MBTILES_BASENAME -Z2 -z12 --coalesce-densest-as-needed --extend-zooms-if-still-dropping $GEOJSON_BASENAME
+    fi
   else
     echo "Applying default parameters"
     tippecanoe -f -o $MBTILES_BASENAME -Z2 -z12 --coalesce-densest-as-needed --extend-zooms-if-still-dropping --drop-smallest-as-needed --simplification=12 --simplify-only-low-zooms $GEOJSON_BASENAME
