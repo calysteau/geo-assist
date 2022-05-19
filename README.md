@@ -71,7 +71,7 @@ Following samples are based on *Georisques* data from https://www.georisques.gou
 * Argument 1 : Dataset name
 * Result : MBTiles files are created all GeoJSON files in `/calysteau/dataset/fr-tri-2020`
 
-### Merge MBTiles to a single dataset MBTiles
+### Merge MBTiles to a single dataset MBTiles file
 ```bash
 ./merge_mbtiles.sh fr-tri-2020
 ```
